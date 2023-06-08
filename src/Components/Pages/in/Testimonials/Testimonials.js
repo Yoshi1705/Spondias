@@ -17,7 +17,7 @@ function Testimonials() {
     <section id="clients-data" className="clients-data">
       <div className="container aos-init aos-animate pt-8" data-aos="fade-up">
         <div className="section-title">
-          <h2 style={{paddingBottom:'0',marginBottom:'0'}}>Clients</h2>
+          <h2 style={{paddingBottom:'0',marginBottom:'0',color:'black'}}>Clients</h2>
           <div className="underline mx-auto"></div>
         </div>
          

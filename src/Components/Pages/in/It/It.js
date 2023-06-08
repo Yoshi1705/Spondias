@@ -23,16 +23,10 @@ const It = () => {
   ];
 
   return (
-    <section
-      id="testimonials"
-      className="testimonials"
-      style={{ padding: "60px 0", overflow: "hidden" }}
-    >
+    <section id="testimonials" className="testimonials">
       <div className="container">
         <div className="section-title">
-          <h2 style={{ color: "black", marginBottom: "10px" }}>
-            IT Consulting Services
-          </h2>
+          <h2 className="section-title-heading" style={{color:'black'}}>IT Consulting Services</h2>
           <div className="underline mx-auto"></div>
         </div>
         <div className="testimonials-slider">
@@ -45,96 +39,33 @@ const It = () => {
             interval={3000}
           >
             {images.map((image, index) => (
-              <div className="d-flex flex-row ">
-                <div
-                  key={index}
-                  className="slider-slide d-flex flex-row "
-                  style={{ width: "380px" }}
-                >
-                  <div className="testimonial-wrap">
-                    <div
-                      className="testimonial-item"
-                      style={{ boxShadow: "0px 2px 12px rgba(0, 0, 0, 0.08)" }}
-                    >
-                      <img
-                        src={image.src}
-                        className="testimonial-img"
-                        alt=""
-                        style={{ width: "300px" }}
-                      />
-                      <h1
-                        style={{
-                          fontSize: "25px",
-                          color: "black",
-                          marginTop: "18px",
-                          fontFamily: "400",
-                        }}
-                      >
-                        {image.title}
-                      </h1>
-                    </div>
-                  </div>
-                </div>
+              <div className="d-flex flex-row" key={index}>
+                {[0, 1, 2].map((slideIndex) => {
+                  const dynamicIndex = index * 3 + slideIndex;
+                  const dynamicImage = images[dynamicIndex % images.length];
 
-                <div
-                  key={index + 1}
-                  className="slider-slide d-flex flex-row"
-                  style={{ width: "380px" }}
-                >
-                  <div className="testimonial-wrap">
+                  return (
                     <div
-                      className="testimonial-item"
-                      style={{ boxShadow: "0px 2px 12px rgba(0, 0, 0, 0.08)" }}
+                      key={dynamicIndex}
+                      className="slider-slide d-flex flex-row"
+                      style={{ width: "380px" }}
                     >
-                      <img
-                        src={image.src}
-                        className="testimonial-img"
-                        alt=""
-                        style={{ width: "300px" }}
-                      />
-                      <h1
-                        style={{
-                          fontSize: "25px",
-                          color: "black",
-                          marginTop: "18px",
-                          fontFamily: "400",
-                        }}
-                      >
-                        {image.title}
-                      </h1>
+                      <div className="testimonial-wrap">
+                        <div className="testimonial-item">
+                          <img
+                            src={dynamicImage.src}
+                            className="testimonial-img"
+                            alt=""
+                            style={{ width: "280px" }}
+                          />
+                          <h1 className="testimonial-title" style={{color:'black',fontSize:'28px',marginTop:'15px',fontWeight:'bold'}}>
+                            {dynamicImage.title}
+                          </h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                <div
-                  key={index + 2}
-                  className="slider-slide d-flex flex-row"
-                  style={{ width: "380px" }}
-                >
-                  <div className="testimonial-wrap">
-                    <div
-                      className="testimonial-item"
-                      style={{ boxShadow: "0px 2px 12px rgba(0, 0, 0, 0.08)" }}
-                    >
-                      <img
-                        src={image.src}
-                        className="testimonial-img"
-                        alt=""
-                        style={{ width: "300px" }}
-                      />
-                      <h1
-                        style={{
-                          fontSize: "25px",
-                          color: "black",
-                          marginTop: "18px",
-                          fontFamily: "400",
-                        }}
-                      >
-                        {image.title}
-                      </h1>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             ))}
           </Carousel>

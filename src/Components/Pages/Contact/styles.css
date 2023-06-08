@@ -50,7 +50,7 @@ a {
     -webkit-box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.05);
     padding: 30px;
-    width: 570px;
+    width:  100%;
 }
 
 .contact-form form {
@@ -85,5 +85,15 @@ a {
     padding: 10px;
     border-radius: 5px;
 }
+@media(max-width: 900px) {
+    .contact-form {
+       
+      margin-top: 10px;
+    }
+    .about-us-img{
+        width:auto;
+    }
+  }
+  
 
  

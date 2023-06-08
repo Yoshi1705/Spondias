@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import image1 from "./slide/slide-1.jpg";
-import image2 from "./slide/image_6267d9aaa0.jpg";
+import image2 from "./slide/image_62610557e5.jpg";
 import image3 from "./slide/image_6267da0688.jpg";
  
 import "./Slider.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Slider() {
-   
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
 
   const item = (img, tag1, tag2, p, btn) => {
     return (
@@ -15,12 +21,12 @@ function Slider() {
          
         <div
           className="overlay-1"
-          style={{ backgroundImage: `url(${img})` ,opacity:'0.6',width:'100%'}}
+          style={{ backgroundImage: `url(${img})` ,opacity:'0.5',width:'100%'}}
           data-aos="fade-up"
         >
           </div>
-          <div className="carousel-container">
-            <div className="carousel-content">
+          <div className="carousel-container    ">
+            <div className="carousel-content animate_animated animate_fadeInUp">
               <h2  className="animate-character">
                 {tag1}
               </h2>

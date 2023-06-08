@@ -42,4 +42,14 @@ a{
     background: #fff;
     height: 100px;
     margin: 8px;
+    position: relative;
+   
 }
+
+.client-logo img {
+    transition: transform 0.3s ease;
+  }
+  
+  .client-logo:hover img {
+    transform: scale(1.3);
+  }

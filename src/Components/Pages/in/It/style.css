@@ -33,7 +33,7 @@ section {
 .carousel .control-dots {
     position: absolute;
     bottom: auto;
-    top: 320px;
+    top: 314px;
     padding: 0;
     text-align: center;
     width: 100%;
@@ -55,8 +55,8 @@ section {
 
 .carousel .control-dots .dot{
     
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background-color: #fff;
     opacity: 1;
     border: 2px solid #29a9e2;

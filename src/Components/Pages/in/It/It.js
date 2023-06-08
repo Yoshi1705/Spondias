@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./style.css";
@@ -12,6 +14,11 @@ import img6 from "./images/image_625d3e3ed1.jpg"; // Graphic design
 import img7 from "./images/image_625d3e74em.jpg"; // National ID cards
 
 const It = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const images = [
     { src: img1, title: "Hosting" },
     { src: img2, title: "Programming" },
@@ -24,7 +31,7 @@ const It = () => {
 
   return (
     <section id="testimonials" className="testimonials">
-      <div className="container">
+      <div className="container aos-init aos-animate" data-aos="fade-up">
         <div className="section-title">
           <h2 className="section-title-heading" style={{color:'black'}}>IT Consulting Services</h2>
           <div className="underline mx-auto"></div>

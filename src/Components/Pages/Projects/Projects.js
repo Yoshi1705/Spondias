@@ -43,14 +43,14 @@ function Projects() {
       </section>
 
       <section id="clients" class="clients">
-      <div class="container aos-init aos-animate" data-aos="fade-up">
+      <div class="container "  >
 
-        <div class="section-title ">
+        <div class="section-title " data-aos="fade-up">
           <h2 style={{marginBottom:'0',paddingBottom:'10px'}}>Our Projects</h2>
           <div className='underline mx-auto'></div>
         </div>
 
-        <div class="row no-gutters clients-wrap clearfix aos-init aos-animate py-5" data-aos="fade-up">
+        <div class="row no-gutters clients-wrap clearfix   py-5" data-aos="fade-up">
         
           <div  className = "col-lg-3 col-md-4 col-6 pb-5"> 
             <a href="https://proxyram.com/" target="_blank" >              
